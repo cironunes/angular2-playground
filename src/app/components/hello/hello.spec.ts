@@ -18,10 +18,14 @@ describe('Hello Component', () => {
   beforeEachProviders(() => []);
 
 
-  it('should ...', injectAsync([TestComponentBuilder], (tcb:TestComponentBuilder) => {
-    return tcb.createAsync(HelloCmp).then((fixture) => {
-      fixture.detectChanges();
-    });
+  it('should have a default `person`', inject([TestComponentBuilder], (tcb:TestComponentBuilder) => {
+    tcb
+      .overrideTemplate(HelloCmp, '<h1>Hello {{person}}!</h1>') // TODO: remove this line once angular/angular issue: #5662 is fixed 
+      .createAsync(HelloCmp)
+      .then((fixture) => {
+        fixture.detectChanges();
+        expect(fixture.nativeElement.textContent).toBe('Hello World!');
+      });
   }));
 
 });
