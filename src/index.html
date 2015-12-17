@@ -3,31 +3,28 @@
 <head>
   <title>Angular2Playground</title>
   <base href=".">
+  <script src="vendor/angular2/bundles/angular2-polyfills.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+  <angular2-playground-app>Loading...</angular2-playground-app>
+  
   <script src="vendor/systemjs/dist/system.src.js"></script>
+  <script src="vendor/rxjs/bundles/Rx.js"></script>
   <script src="vendor/angular2/bundles/angular2.dev.js"></script>
   <script src="vendor/angular2/bundles/router.dev.js"></script>
   <script src="vendor/angular2/bundles/http.dev.js"></script>
   {{content-for 'head'}}
   <script>
     System.config({
-      map: {
-        'rxjs' : 'vendor/rxjs'
-      },
       packages: {
         app: {
           format: 'register',
-          defaultExtension: 'js'
-        },
-        'rxjs': {
           defaultExtension: 'js'
         }
       }
     });
     System.import('app.js').then(null, console.error.bind(console));
   </script>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-</head>
-<body>
-  <angular2-playground-app>Loading...</angular2-playground-app>
 </body>
 </html>

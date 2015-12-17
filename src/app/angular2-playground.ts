@@ -23,4 +23,5 @@ import {HttpSampleCmp} from './components/http-sample/http-sample';
   new Route({ path: '/http-sample', component: HttpSampleCmp, name: 'HttpSampleCmp' })
 ])
 export class Angular2PlaygroundApp {
+
 }
