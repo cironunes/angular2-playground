@@ -18,10 +18,12 @@ describe('NgUpgrade Component', () => {
   beforeEachProviders(() => []);
 
 
-  it('should ...', injectAsync([TestComponentBuilder], (tcb:TestComponentBuilder) => {
-    return tcb.createAsync(NgUpgradeCmp).then((fixture) => {
-      fixture.detectChanges();
-    });
+  it('should ...', inject([TestComponentBuilder], (tcb:TestComponentBuilder) => {
+    tcb
+      .overrideTemplate(NgUpgradeCmp, 'x')
+      .createAsync(NgUpgradeCmp).then((fixture) => {
+        fixture.detectChanges();
+      });
   }));
 
 });

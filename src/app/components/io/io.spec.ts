@@ -10,18 +10,18 @@ import {
   beforeEachProviders
 } from 'angular2/testing';
 import {provide} from 'angular2/core';
-import {HttpSampleCmp} from './http-sample';
+import {IOCmp} from './io';
 
 
-describe('HttpSample Component', () => {
+describe('IO Component', () => {
 
   beforeEachProviders(() => []);
 
 
   it('should ...', inject([TestComponentBuilder], (tcb:TestComponentBuilder) => {
     tcb
-      .overrideTemplate(HttpSampleCmp, 'x')
-      .createAsync(HttpSampleCmp).then((fixture) => {
+      .overrideTemplate(IOCmp, 'x')
+      .createAsync(IOCmp).then((fixture) => {
         fixture.detectChanges();
       });
   }));
