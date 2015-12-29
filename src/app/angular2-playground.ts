@@ -9,6 +9,7 @@ import {HelloCmp} from './components/hello/hello';
 import {NgUpgradeCmp} from './components/ng-upgrade/ng-upgrade';
 import {HttpSampleCmp} from './components/http-sample/http-sample';
 import {IOCmp} from './components/io/io';
+import {ObservablesCmp} from './components/observables/observables';
 
 
 @Component({
@@ -22,7 +23,7 @@ import {IOCmp} from './components/io/io';
   new Route({ path: '/', component: HelloCmp, name: 'HelloCmp' }),
   new Route({ path: '/ng-upgrade', component: NgUpgradeCmp, name: 'NgUpgradeCmp' }),
   new Route({ path: '/http-sample', component: HttpSampleCmp, name: 'HttpSampleCmp' }),
-  new Route({ path: '/io', component: IOCmp, name: 'IOCmp' }),
+  new Route({ path: '/observables', component: ObservablesCmp, name: 'ObservablesCmp' })
 ])
 export class Angular2PlaygroundApp {
 
