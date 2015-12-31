@@ -1,6 +1,10 @@
 <form>
-  <input type="text" placeholder="What you gonna do?" tabindex="1">
+  <input type="text" placeholder="What you gonna do?" tabindex="1" [ngFormControl]="todo">
 </form>
+
+<ul>
+  <li *ngFor="#suggestion of suggestions">{{ suggestion.description }}</li>
+</ul>
 
 <ul>
   <li *ngFor="#todo of todos">{{ todo.description }}</li>
