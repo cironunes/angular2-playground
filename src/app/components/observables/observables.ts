@@ -38,4 +38,9 @@ export class ObservablesCmp {
       });
   }
 
+  onEnter($event, todo) {
+    $event.preventDefault();
+    this._todosService.addTodo(todo.value);
+    todo.updateValue('');
+  }
 }

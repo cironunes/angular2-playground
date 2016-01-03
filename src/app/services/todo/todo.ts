@@ -36,7 +36,8 @@ export class TodosService {
     }, 2000);
   }
   
-  addTodo(todo) {
+  addTodo(todoText) {
+    let todo = new Todo(todoText, false);
     this.dataStore.todos.push(todo);
     this._todosObserver.next(this.dataStore.todos);
   }

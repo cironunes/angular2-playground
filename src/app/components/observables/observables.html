@@ -1,5 +1,5 @@
 <form>
-  <input type="text" placeholder="What you gonna do?" tabindex="1" [ngFormControl]="todo">
+  <input type="text" placeholder="What you gonna do?" tabindex="1" [ngFormControl]="todo" (keydown.enter)="onEnter($event, todo)">
 </form>
 
 <ul>
